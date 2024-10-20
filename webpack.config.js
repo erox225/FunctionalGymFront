@@ -24,11 +24,13 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map', // Cambiado para evitar 'eval'
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),  // Usa "static" en lugar de "contentBase"
     },
     compress: true,
     port: 9000,
+    hot: false, // Desactivar Hot Module Replacement (HMR)
   },
 };
